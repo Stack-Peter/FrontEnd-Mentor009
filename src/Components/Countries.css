@@ -1,0 +1,23 @@
+.Countries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 6rem 4rem 0 4rem;
+}
+
+.Country {
+  max-width: 17rem;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  border-radius: 0.3rem;
+}
+
+.Country img {
+  width: 17rem;
+  height: 9rem;
+  border-radius: 0.3rem;
+}
+
+ul li {
+  list-style: none;
+}
