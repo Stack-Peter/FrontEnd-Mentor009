@@ -1,11 +1,12 @@
 import './App.css';
 import MainPage from './Components/MainPage';
+import { GlobalStorage } from './GlobalContext'
 
 function App() {
   return (
-    <div className="App">
+    <GlobalStorage className="App">
       <MainPage />
-    </div>
+    </GlobalStorage>
   );
 }
 

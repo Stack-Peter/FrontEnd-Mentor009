@@ -1,13 +1,17 @@
 import React from 'react'
 import css from './Countries.css'
-const Countries = () => {
-    const [data, setData] = React.useState(null)
-    React.useEffect(() => {
-        fetch('https://restcountries.com/v2/all')
-            .then(r => r.json())
-            .then(json => setData(json))
-    }, [])
+import { GlobalContext } from '../GlobalContext'
 
+const Countries = () => {
+    const { data, filter, inputVal } = React.useContext(GlobalContext)
+    const [filteredItem, setFilteredItem] = React.useState([])
+
+
+    if (filter) {
+        data.filter(pais => pais.name.includes(inputVal) ? setFilteredItem(pais) : '')
+    } else if (filteredItem.length >= 1) {
+        console.log(filteredItem)
+    }
     return (
         <div className='Countries'>
             {data && data.map((i, index) => (
