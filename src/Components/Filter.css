@@ -1,3 +1,43 @@
 .Form {
-  margin: 2rem 5rem 0rem 5rem;
+  margin: 2rem 0rem 0rem 0rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+input,
+select {
+  margin: 2rem 6.3rem 2rem 6.3rem;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+input {
+  padding: 1rem 12rem 1rem 4rem;
+  border-radius: 0.3rem;
+  border: none;
+  -webkit-box-shadow: 1px 2px 9px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 2px 9px -1px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+input::before {
+  background: url("../icons/search.svg") no-repeat center;
+  width: 10px;
+  height: 10px;
+}
+
+input::placeholder {
+  font-size: 1rem;
+}
+
+form img {
+  width: 1rem;
+  position: absolute;
+  left: 8.2rem;
+  top: 9.5rem;
+}
+
+form select {
+  padding: 0 2rem 0 1rem;
+  font-weight: 600;
+  color: hsl(200, 15%, 8%);
 }
