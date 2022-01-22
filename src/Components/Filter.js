@@ -31,7 +31,7 @@ const Filter = () => {
                 onChange={handleSelect}
                 id='countries'
                 value={optionVal}>
-                <option value="none">Filter by Region</option>
+                <option value="">Filter by Region</option>
                 <option value="Africa">Africa</option>
                 <option value="Americas">Americas</option>
                 <option value="Asia">Asia</option>

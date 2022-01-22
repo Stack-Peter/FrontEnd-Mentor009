@@ -19,12 +19,6 @@ input {
   outline: none;
 }
 
-input::before {
-  background: url("../icons/search.svg") no-repeat center;
-  width: 10px;
-  height: 10px;
-}
-
 input::placeholder {
   font-size: 1rem;
 }
@@ -33,11 +27,16 @@ form img {
   width: 1rem;
   position: absolute;
   left: 8.2rem;
-  top: 9.5rem;
+  top: 9rem;
 }
 
 form select {
   padding: 0 2rem 0 1rem;
   font-weight: 600;
   color: hsl(200, 15%, 8%);
+}
+
+select,
+option {
+  font-weight: 600;
 }

@@ -7,6 +7,7 @@ export const GlobalStorage = ({ children }) => {
     const [filterItens, setFilterItens] = React.useState(false)
     const [inputVal, setInputVal] = React.useState('')
     const [optionVal, setOptionVal] = React.useState('')
+    const [darkMod, setDarkMod] = React.useState(false)
     const regexp = new RegExp(inputVal, "gi")
     React.useEffect(() => {
         fetch('https://restcountries.com/v2/all')
@@ -24,7 +25,9 @@ export const GlobalStorage = ({ children }) => {
                 setInputVal,
                 optionVal,
                 setOptionVal,
-                regexp
+                regexp,
+                darkMod,
+                setDarkMod
             }}>
             {children}
         </GlobalContext.Provider>
