@@ -4,7 +4,7 @@ import svg from '../icons/search.svg'
 import css from './Filter.css'
 
 const Filter = () => {
-    const { setFilterItens, inputVal, setInputVal, optionVal, setOptionVal } = React.useContext(GlobalContext)
+    const { setFilterItens, setInputVal, optionVal, setOptionVal, darkMod } = React.useContext(GlobalContext)
     const handleChange = ({ target }) => {
         if (target.value !== '' || undefined) {
             setFilterItens(true)
@@ -20,14 +20,16 @@ const Filter = () => {
         }
     }
     return (
-        <form id='countries' className="Form">
+        <form id='countries' className={darkMod ? 'DarkForm' : 'Form'}>
             <input
+                className={darkMod ? 'DarkInput' : 'Input'}
                 onChange={handleChange}
                 type="text"
                 placeholder='Search for a country...'
             />
             <img src={svg} />
             <select
+                className={darkMod ? 'DarkSelect' : 'Select'}
                 onChange={handleSelect}
                 id='countries'
                 value={optionVal}>

@@ -1,0 +1,12 @@
+.Main,
+.MainDark {
+  min-height: 100vh;
+}
+
+.Main {
+  background: hsl(0, 0%, 98%);
+}
+
+.MainDark {
+  background: hsl(207, 26%, 17%);
+}
