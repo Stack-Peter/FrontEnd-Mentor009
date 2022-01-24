@@ -30,10 +30,23 @@
   color: hsl(0, 0%, 100%);
 }
 
+.Country h1,
+.Country h3,
+.Country li,
+.Country a {
+  color: black;
+}
+
+strong {
+  font-weight: 600;
+}
+
 h1,
 h3,
-li {
+li,
+a {
   font-family: "Nunito Sans", sans-serif;
+  text-decoration: none;
 }
 
 .Country img,
@@ -56,4 +69,9 @@ ul li {
 .DarkCountry h3 {
   padding-left: 1.5rem;
   text-align: start;
+}
+
+a div:hover {
+  -webkit-box-shadow: 2px 3px 10px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 3px 10px 0px rgba(0, 0, 0, 0.4);
 }

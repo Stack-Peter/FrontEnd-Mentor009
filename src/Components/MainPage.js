@@ -10,7 +10,6 @@ const MainPage = () => {
 
     return (
         <div className={darkMod ? 'MainDark' : 'Main'}>
-            <Nav />
             <Filter />
             <Countries />
         </div>

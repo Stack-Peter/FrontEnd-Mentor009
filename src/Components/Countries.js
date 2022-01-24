@@ -1,5 +1,6 @@
 import React from 'react'
 import css from './Countries.css'
+import { Link } from 'react-router-dom'
 import { GlobalContext } from '../GlobalContext'
 
 const Countries = () => {
@@ -37,15 +38,17 @@ const Countries = () => {
     return (
         <div className={darkMod ? 'DarkCountries' : 'Countries'}>
             {data && data.map((i, index) => (
-                <div key={index} className={darkMod ? 'DarkCountry' : 'Country'}>
-                    <img src={i.flags.png} />
-                    <h3>{i.name}</h3>
-                    <ul>
-                        <li><strong>Population: </strong>{i.population}</li>
-                        <li><strong>Region: </strong>{i.region}</li>
-                        <li><strong>Capital: </strong>{i.capital}</li>
-                    </ul>
-                </div>
+                <Link key={index} to={`/countries/${i.name}`}>
+                    <div key={index} className={darkMod ? 'DarkCountry' : 'Country'}>
+                        <img src={i.flags.png} />
+                        <h3>{i.name}</h3>
+                        <ul>
+                            <li><strong>Population: </strong>{i.population}</li>
+                            <li><strong>Region: </strong>{i.region}</li>
+                            <li><strong>Capital: </strong>{i.capital}</li>
+                        </ul>
+                    </div>
+                </Link>
             ))}
         </div>
     )

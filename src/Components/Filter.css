@@ -1,8 +1,9 @@
 .Form,
 .DarkForm {
-  margin: 2rem 0rem 0rem 0rem;
+  margin: 0rem 0rem 0rem 0rem;
   display: flex;
   justify-content: space-between;
+  padding-top: 2rem;
 }
 
 input,
