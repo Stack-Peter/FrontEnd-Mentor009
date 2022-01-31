@@ -6,18 +6,22 @@ const Country = () => {
     const btn = '<-- Back'
     const params = useParams()
     const [countrie, setCountrie] = React.useState([])
+    const simpleArray = [];
     React.useEffect(() => {
-        console.log(params)
-        if (params) {
-            fetch(`https://restcountries.com/v3.1/name/${params.id}`)
+        console.log(params.id)
+        if (params.id) {
+            fetch('https://restcountries.com/v2/all')
                 .then(r => r.json())
-                .then(json => setCountrie(json))
-                .then(() => console.log(params.id, countrie[0]))
+                .then(json => simpleArray.push(json))
+                .then(() => (simpleArray.filter(pais => pais.name == params.id ? console.log(pais) : '')))
         }
-    }, [params])
+    }, [])
 
     return (
-        <h1>{params.id}</h1>
+        <>
+            <div>
+            </div>
+        </>
     );
 };
 

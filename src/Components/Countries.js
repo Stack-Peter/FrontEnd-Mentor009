@@ -13,15 +13,17 @@ const Countries = () => {
     if (paises.length >= 1) return (
         <div className={darkMod ? 'DarkCountries' : 'Countries'}>
             {paises && paises.map((i, index) => (
-                <div key={index} className={darkMod ? 'DarkCountry' : 'Country'}>
-                    <img src={i.flags.png} />
-                    <h3>{i.name}</h3>
-                    <ul>
-                        <li><strong>Population: </strong>{i.population}</li>
-                        <li><strong>Region: </strong>{i.region}</li>
-                        <li><strong>Capital: </strong>{i.capital}</li>
-                    </ul>
-                </div>
+                <Link key={index} to={`/countries/${i.name}`}>
+                    <div key={index} className={darkMod ? 'DarkCountry' : 'Country'}>
+                        <img src={i.flags.png} />
+                        <h3>{i.name}</h3>
+                        <ul>
+                            <li><strong>Population: </strong>{i.population}</li>
+                            <li><strong>Region: </strong>{i.region}</li>
+                            <li><strong>Capital: </strong>{i.capital}</li>
+                        </ul>
+                    </div>
+                </Link>
             ))}
         </div>
     )
