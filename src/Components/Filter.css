@@ -1,0 +1,55 @@
+.Form,
+.DarkForm {
+  margin: 0rem 0rem 0rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+
+input,
+select {
+  margin: 2rem 6.3rem 2rem 6.3rem;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+input,
+.DarkInput {
+  padding: 1rem 12rem 1rem 4rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+}
+
+input.DarkInput,
+select.DarkSelect,
+input.DarkInput::placeholder {
+  background: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+}
+
+input {
+  -webkit-box-shadow: 1px 2px 9px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 2px 9px -1px rgba(0, 0, 0, 0.2);
+}
+
+input::placeholder {
+  font-size: 1rem;
+}
+
+form img {
+  width: 1rem;
+  position: absolute;
+  left: 8.2rem;
+  top: 9rem;
+}
+
+form select {
+  padding: 0 2rem 0 1rem;
+  font-weight: 600;
+  color: hsl(200, 15%, 8%);
+}
+
+select,
+option {
+  font-weight: 600;
+}
