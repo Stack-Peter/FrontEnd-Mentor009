@@ -1,7 +1,7 @@
 import React from 'react'
 import { GlobalContext } from '../GlobalContext'
 import svg from '../icons/search.svg'
-import css from './Filter.css'
+import './Filter.css'
 
 const Filter = () => {
     const { setFilterItens, setInputVal, optionVal, setOptionVal, darkMod } = React.useContext(GlobalContext)
@@ -16,6 +16,7 @@ const Filter = () => {
     }
     const handleSelect = ({ target }) => {
         if (target.value !== 'none' || undefined) {
+            setFilterItens(true)
             setOptionVal(target.value)
         }
     }

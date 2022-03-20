@@ -3,8 +3,8 @@ import React from 'react'
 export const GlobalContext = React.createContext();
 
 export const GlobalStorage = ({ children }) => {
-    const [data, setData] = React.useState(null)
-    const [countrie, setCountrie] = React.useState(null)
+    const [data, setData] = React.useState(false)
+    const [countrie, setCountrie] = React.useState(false)
     const [filterItens, setFilterItens] = React.useState(false)
     const [inputVal, setInputVal] = React.useState('')
     const [optionVal, setOptionVal] = React.useState('')
@@ -14,7 +14,7 @@ export const GlobalStorage = ({ children }) => {
         fetch('https://restcountries.com/v2/all')
             .then(r => r.json())
             .then(json => setData(json))
-    }, [])
+    }, []);
     return (
         <GlobalContext.Provider
             value={{
