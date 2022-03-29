@@ -1,0 +1,100 @@
+.form,
+.darkForm {
+  margin: 0rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem 0 1rem;
+}
+
+.containerSvg {
+  position: relative;
+}
+
+.form svg {
+  color: black;
+}
+
+.darkForm svg {
+  color: white;
+}
+
+input,
+select {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+input,
+.darkInput {
+  padding: 1rem 12rem 1rem 4rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+}
+
+input.darkInput,
+select.darkSelect,
+input.darkInput::placeholder {
+  background: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+}
+
+input,
+form select {
+  -webkit-box-shadow: 1px 2px 9px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 2px 9px -1px rgba(0, 0, 0, 0.2);
+}
+
+input::placeholder {
+  font-size: 1rem;
+}
+
+form svg {
+  width: 1rem;
+  position: absolute;
+  left: 30px;
+  top: 17px;
+}
+
+form select {
+  padding: 0 2rem 0 1rem;
+  font-weight: 600;
+  color: hsl(200, 15%, 8%);
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+select,
+option {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 800px){
+  input, 
+  .darkInput {
+    padding: 1rem 4rem 1rem 3rem;
+  }
+  form svg {
+    left: 20px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .form, .darkForm {
+    display: grid;
+    justify-content: center;
+  }
+
+  .containerSvg {
+    margin-bottom: 1rem;
+  }
+
+  #input01 {
+    padding: 1rem 8rem 1rem 3rem;
+  }
+  
+  form select {
+    width: 11rem;
+    padding: 1rem;
+  }
+}

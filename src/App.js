@@ -1,5 +1,5 @@
 import './App.css';
-import MainPage from './Components/MainPage';
+import MainPage from './Components/';
 import Country from './Components/Country';
 import Nav from './Components/Nav';
 import {

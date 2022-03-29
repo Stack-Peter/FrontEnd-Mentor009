@@ -1,13 +1,13 @@
-.Countries,
-.DarkCountries {
+.countries,
+.darkCountries {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 3rem 4rem 0 4rem;
+  justify-content: space-between;
+  margin-top: 3rem;
 }
 
-.Country,
-.DarkCountry {
+.country,
+.darkCountry {
   max-width: 17rem;
   margin: 1rem 1rem 3rem 1rem;
   border-radius: 0.3rem;
@@ -16,24 +16,24 @@
   box-shadow: 1px 2px 9px -1px rgba(0, 0, 0, 0.2);
 }
 
-.DarkCountry {
+.darkCountry {
   background: hsl(209, 23%, 22%);
 }
 
-.Country {
+.country {
   background: hsl(0, 0%, 100%);
 }
 
-.DarkCountries h1,
-.DarkCountries h3,
-.DarkCountries li {
+.darkCountries h1,
+.darkCountries h3,
+.darkCountries li {
   color: hsl(0, 0%, 100%);
 }
 
-.Country h1,
-.Country h3,
-.Country li,
-.Country a {
+.country h1,
+.country h3,
+.country li,
+.country a {
   color: black;
 }
 
@@ -49,8 +49,8 @@ a {
   text-decoration: none;
 }
 
-.Country img,
-.DarkCountry img {
+.country img,
+.darkCountry img {
   width: 17rem;
   height: 10rem;
   border-radius: 0.3rem;
@@ -65,8 +65,8 @@ ul li {
   text-align: start;
 }
 
-.Country h3,
-.DarkCountry h3 {
+.country h3,
+.darkCountry h3 {
   padding-left: 1.5rem;
   text-align: start;
 }
@@ -74,4 +74,11 @@ ul li {
 a div:hover {
   -webkit-box-shadow: 2px 3px 10px 0px rgba(0, 0, 0, 0.4);
   box-shadow: 2px 3px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 640px) {
+  .countries,
+  .darkCountries {
+  justify-content: center;
+}
 }

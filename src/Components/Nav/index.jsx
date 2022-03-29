@@ -1,7 +1,7 @@
 import React from 'react'
-import { GlobalContext } from '../GlobalContext'
-import svg from '../icons/moon.svg'
-import './Nav.css'
+import { GlobalContext } from '../../GlobalContext'
+import './styles.css'
+import { MoonSolid, MoonOutline } from './Components/Moons'
 
 const Nav = () => {
     const { darkMod, setDarkMod } = React.useContext(GlobalContext);
@@ -9,10 +9,8 @@ const Nav = () => {
         darkMod ? setDarkMod(false) : setDarkMod(true);
         if (darkMod) {
             localStorage.setItem('darkMod', 'true');
-            console.log(localStorage)
         } else {
             localStorage.setItem('darkMod', 'false');
-            console.log(localStorage)
         }   
     }
     React.useEffect(() => {
@@ -25,13 +23,13 @@ const Nav = () => {
             {darkMod ? 
             <div className='svg'
                 onClick={handleClick}>
-                <img src={svg} />
+                <MoonSolid />
                 <p>Light Mode</p>
             </div>
             : 
             <div className='svg'
                 onClick={handleClick}>
-                <img src={svg} />
+                <MoonOutline />
                 <p>Dark Mode</p>
             </div>}
         </nav>

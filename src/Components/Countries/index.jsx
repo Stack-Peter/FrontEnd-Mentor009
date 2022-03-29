@@ -1,7 +1,7 @@
 import React from 'react'
-import './Countries.css'
-import { GlobalContext } from '../GlobalContext'
-import ContentComponent from './ContentComponent'
+import { GlobalContext } from '../../GlobalContext'
+import ContentComponent from './Components/ContentComponent'
+import './styles.css'
 
 const Countries = () => {
     const { data, inputVal, filterItens, optionVal, regexp, darkMod } = React.useContext(GlobalContext);
@@ -25,7 +25,7 @@ const Countries = () => {
     if (filterItens) {
         if (paises.length < 0) {
             return (
-                <div className={darkMod ? 'DarkCountries' : 'Countries'}>
+                <div className={darkMod ? 'darkCountries' : 'countries'}>
                     <h1>Ops! Parecem não haver países em seu filtro...</h1>
                 </div>
             )
