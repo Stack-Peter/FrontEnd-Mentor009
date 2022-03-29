@@ -11,7 +11,7 @@ const ContentComponent = ({ paises, data, darkMod}) => {
     {countriesToShow && countriesToShow.map((i, index) => (
         <Link key={index} to={`/countries/${i.name}`} onClick={() => setCountrie(i)}>
             <div key={index} className={darkMod ? 'darkCountry' : 'country'}>
-                <img src={i.flags.png} />
+                <img src={i.flags.png} alt=""/>
                 <h3>{i.name}</h3>
                 <ul>
                     <li><strong>Population: </strong>{i.population}</li>

@@ -14,7 +14,7 @@ export const GlobalStorage = ({ children }) => {
         fetch('https://restcountries.com/v2/all')
             .then(r => r.json())
             .then(json => setData(json))
-    }, []);
+    });
     return (
         <GlobalContext.Provider
             value={{

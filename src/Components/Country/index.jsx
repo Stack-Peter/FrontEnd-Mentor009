@@ -17,7 +17,7 @@ const Country = () => {
                 .then(arr => transformJson(arr))
                 .then(data => setCountrie(data[0]))
         }
-    }, [])
+    })
     
     return (
         <>
@@ -30,7 +30,7 @@ const Country = () => {
                                     <button>Back</button>
                                 </Link>
                             </div>
-                            {countrie.flags.svg && <img src={countrie.flags.svg} />}
+                            {countrie.flags.svg && <img src={countrie.flags.svg} alt=""/>}
                         </div>
                         <div className={darkMod ? 'darkCountryInfo' : 'countryInfo'}>
                             <div>
