@@ -77,7 +77,7 @@ div.svg img {
 @media screen and (max-width: 770px) {
   .nav,
   .navDark {
-    padding: 0 1rem;
+    padding: 1rem 1rem;
   }
 }
 
