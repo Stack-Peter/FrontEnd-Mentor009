@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Stack-Peter/FrontEnd-Mentor009)
-- Live Site URL: [Add live site URL here](https://flourishing-melba-b64295.netlify.app/)
+- Solution URL: [GitHub](https://github.com/Stack-Peter/FrontEnd-Mentor009)
+- Live Site URL: [Here](https://flourishing-melba-b64295.netlify.app/)
 
 ## My process
 
@@ -44,6 +44,6 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://beacons.page/ferreira_pedro)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Stack-Peter)
+- Website - [Beacons](https://beacons.page/ferreira_pedro)
+- Frontend Mentor - [@Stack-Peter](https://www.frontendmentor.io/profile/Stack-Peter)
 
