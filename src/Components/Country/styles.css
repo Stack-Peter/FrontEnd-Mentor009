@@ -170,7 +170,11 @@ div.darkImgCountry img {
   .country,
   .darkCountry {
     height: 700px;
-    padding-top: 8rem;
+    padding-top: 7rem;
+  }
+
+  .content {
+    height: 92%;
   }
 
 
