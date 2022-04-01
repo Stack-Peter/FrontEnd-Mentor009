@@ -21,19 +21,12 @@ const Nav = () => {
     return (
         <nav className={darkMod ? 'navDark' : 'nav'}>
             <div><h2 className='animate__jackInTheBox'>Where in the world?</h2></div>
-            {darkMod ? 
             <div 
                 className='svg'
                 onClick={handleClick}>
-                <MoonSolid />
-                <p>Light Mode</p>
-            </div>
-            : 
-            <div className='svg'
-                onClick={handleClick}>
-                <MoonOutline />
+                { darkMod ? <MoonSolid /> : <MoonOutline /> }
                 <p>Dark Mode</p>
-            </div>}
+            </div>
         </nav>
     )
 }
