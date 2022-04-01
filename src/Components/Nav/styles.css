@@ -16,6 +16,11 @@
   background: hsl(209, 23%, 22%);
 }
 
+.nav h2,
+.navDark h2 {
+  z-index: 100000;
+}
+
 .navDark h2,
 .navDark p {
   color: hsl(0, 0%, 100%);
@@ -26,13 +31,11 @@ nav {
 
 h2 {
   font-size: 1.3rem;
-  animation-name: mood;
   animation-duration: 1s;
 }
 
 nav p {
   font-weight: bold;
-  animation-name: mood;
   animation-duration: 1s;
 }
 
@@ -55,23 +58,11 @@ div.svg img {
 .navDark svg {
   align-self: center;
   margin-right: 0.25rem;
-  animation-name: mood;
   animation-duration: 1s;
 }
 
 .navDark svg {
   color: white;
-}
-
-@keyframes mood {
-  from {
-    opacity: 0;
-    transform: translateY(-20rem);
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 @media screen and (max-width: 770px) {
@@ -84,8 +75,6 @@ div.svg img {
 @media screen and (max-width: 640px) {
   h2 {
     font-size: 0.9rem;
-    animation-name: mood;
-    animation-duration: 2s;
   }
   
   nav p {

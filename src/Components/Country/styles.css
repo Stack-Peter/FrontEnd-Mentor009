@@ -1,10 +1,10 @@
-.countrie,
-.darkCountrie {
+.country,
+.darkCountry {
   display: block;
-  height: 91.5vh;
+  height: calc(100vh - 8.34vh);
 }
 
-.darkCountrie {
+.darkCountry {
   background: hsl(207, 26%, 17%);
 }
 
@@ -114,12 +114,9 @@ div.darkImgCountry img {
 
 @media screen and (max-width: 1100px) {
 
-  .countrie,
-  .darkCountrie {
+  .country,
+  .darkCountry {
     height: 950px;
-  }
-
-  .content {
     padding-top: 2rem;
   }
 
@@ -135,9 +132,10 @@ div.darkImgCountry img {
     padding-top: 0;
   }
 
-  .countrie,
-  .darkCountrie {
-    height: 950px;
+  .country,
+  .darkCountry {
+    height: 800px;
+    padding-top: 8rem;
   }
 
   div.imgCountry img,
@@ -168,6 +166,13 @@ div.darkImgCountry img {
 }
 
 @media screen and (max-width: 500px) {
+
+  .country,
+  .darkCountry {
+    height: 700px;
+    padding-top: 8rem;
+  }
+
 
   div.imgCountry img,
   div.darkImgCountry img {

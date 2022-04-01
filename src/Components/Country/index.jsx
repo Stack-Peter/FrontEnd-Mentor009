@@ -2,27 +2,28 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom'
 import { GlobalContext } from '../../GlobalContext';
 import './styles.css'
+import 'animate.css';
 
 const Country = () => {
     function transformJson(arr) {
         return arr.filter(i => i.name === params.id)
     }
     const params = useParams()
-    const { countrie, darkMod, setCountrie } = React.useContext(GlobalContext);
+    const { country, darkMod, setCountry } = React.useContext(GlobalContext);
 
     React.useEffect(() => {
-        if (countrie === false) {
+        if (country === false) {
             fetch('https://restcountries.com/v2/all')
                 .then(r => r.json())
                 .then(arr => transformJson(arr))
-                .then(data => setCountrie(data[0]))
+                .then(data => setCountry(data[0]))
         }
     })
     
     return (
         <>
-            {countrie &&
-                <div className={darkMod ? 'darkCountrie' : 'countrie'}>
+            {country &&
+                <div className={darkMod ? 'darkCountry' : 'country'}>
                     <div className='content'>
                         <div className={darkMod ? 'darkImgCountry' : 'imgCountry'}>
                             <div className='wrapperBtn'>
@@ -30,34 +31,34 @@ const Country = () => {
                                     <button>Back</button>
                                 </Link>
                             </div>
-                            {countrie.flags.svg && <img src={countrie.flags.svg} alt=""/>}
+                            {country.flags.svg && <img src={country.flags.svg} alt=""/>}
                         </div>
-                        <div className={darkMod ? 'darkCountryInfo' : 'countryInfo'}>
+                        <div className={`${darkMod ? 'darkCountryInfo' : 'countryInfo'} animate__zoomIn`}>
                             <div>
-                                {countrie.name && <h1>{countrie.name}</h1>}
+                                {country.name && <h1>{country.name}</h1>}
                             </div>
                             <div className={darkMod ? 'darkCountryInfoUl' : 'countryInfoUl'}>
                                 <ul className={darkMod ? 'darkCountryInfoLi' : 'countryInfoLi'}>
-                                    <li><strong>Native Name: </strong>{countrie.nativeName && countrie.nativeName}</li>
-                                    <li><strong>Population: </strong>{countrie.population && countrie.population}</li>
-                                    <li><strong>Region: </strong>{countrie.region && countrie.region}</li>
-                                    <li><strong>Sub Region: </strong>{countrie.subregion && countrie.subregion}</li>
-                                    {countrie.capital && <li><strong>Capital: </strong>{countrie.capital}</li>}
+                                    <li><strong>Native Name: </strong>{country.nativeName && country.nativeName}</li>
+                                    <li><strong>Population: </strong>{country.population && country.population}</li>
+                                    <li><strong>Region: </strong>{country.region && country.region}</li>
+                                    <li><strong>Sub Region: </strong>{country.subregion && country.subregion}</li>
+                                    {country.capital && <li><strong>Capital: </strong>{country.capital}</li>}
                                 </ul>
                                 <ul className='countryInfoLi02'>
-                                    {countrie.topLevelDomain && <li><strong>Top Level Domain: </strong>{countrie.topLevelDomain[0]}</li>}
-                                    {countrie.currencies && <li><strong>Currencies: </strong>{countrie.currencies[0].name}</li>}{
-                                        countrie.languages &&
+                                    {country.topLevelDomain && <li><strong>Top Level Domain: </strong>{country.topLevelDomain[0]}</li>}
+                                    {country.currencies && <li><strong>Currencies: </strong>{country.currencies[0].name}</li>}{
+                                        country.languages &&
                                         <li><strong>Languages: </strong>{
-                                            countrie.languages.map((i) => (countrie.languages &&
-                                                countrie.languages[countrie.languages.length - 1].name !== i.name ? i.name + ', ' : i.name + '.'
+                                            country.languages.map((i) => (country.languages &&
+                                                country.languages[country.languages.length - 1].name !== i.name ? i.name + ', ' : i.name + '.'
                                             ))
                                         }</li>}
                                 </ul>
-                            </div>{countrie.borders &&
+                            </div>{country.borders &&
                                 <div className={darkMod ? 'darkSpanContent' : 'spanContent'}>
-                                    <p><strong>Boder Countries:</strong></p> {
-                                        countrie.borders.map((i, index) => (
+                                    <p><strong>Boder Countrys:</strong></p> {
+                                        country.borders.map((i, index) => (
                                             index <= 2 ? <span key={index}>{i}</span> : ''
                                         ))
                                     }

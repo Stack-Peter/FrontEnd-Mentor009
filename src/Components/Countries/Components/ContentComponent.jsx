@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom'
 import { GlobalContext } from '../../../GlobalContext'
 
 const ContentComponent = ({ paises, data, darkMod}) => {
-  const { setCountrie } = React.useContext(GlobalContext);
+  const { setCountry } = React.useContext(GlobalContext);
   let countriesToShow;
   paises ? (countriesToShow = paises) : (countriesToShow = data);
   return (
-    <div className={darkMod ? 'darkCountries' : 'countries'}>
+    <div className={`${darkMod ? 'darkCountries' : 'countries'}`}>
     {countriesToShow && countriesToShow.map((i, index) => (
-        <Link key={index} to={`/countries/${i.name}`} onClick={() => setCountrie(i)}>
-            <div key={index} className={darkMod ? 'darkCountry' : 'country'}>
+        <Link key={index} to={`/countries/${i.name}`} onClick={() => setCountry(i)}>
+            <div key={index} className={darkMod ? 'jitDarkCountry' : 'jitCountry'}>
                 <img src={i.flags.png} alt=""/>
                 <h3>{i.name}</h3>
                 <ul>

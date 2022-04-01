@@ -1,7 +1,8 @@
 import React from 'react'
 import { GlobalContext } from '../../GlobalContext'
-import './styles.css'
 import { MoonSolid, MoonOutline } from './Components/Moons'
+import './styles.css'
+import 'animate.css';
 
 const Nav = () => {
     const { darkMod, setDarkMod } = React.useContext(GlobalContext);
@@ -19,9 +20,10 @@ const Nav = () => {
     })
     return (
         <nav className={darkMod ? 'navDark' : 'nav'}>
-            <div><h2>Where in the world?</h2></div>
+            <div><h2 className='animate__jackInTheBox'>Where in the world?</h2></div>
             {darkMod ? 
-            <div className='svg'
+            <div 
+                className='svg'
                 onClick={handleClick}>
                 <MoonSolid />
                 <p>Light Mode</p>

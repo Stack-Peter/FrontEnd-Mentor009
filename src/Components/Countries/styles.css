@@ -6,8 +6,8 @@
   margin-top: 3rem;
 }
 
-.country,
-.darkCountry {
+.jitCountry,
+.jitDarkCountry {
   max-width: 17rem;
   margin: 1rem 1rem 3rem 1rem;
   border-radius: 0.3rem;
@@ -16,11 +16,11 @@
   box-shadow: 1px 2px 9px -1px rgba(0, 0, 0, 0.2);
 }
 
-.darkCountry {
+.jitDarkCountry {
   background: hsl(209, 23%, 22%);
 }
 
-.country {
+.jitCountry {
   background: hsl(0, 0%, 100%);
 }
 
@@ -30,10 +30,10 @@
   color: hsl(0, 0%, 100%);
 }
 
-.country h1,
-.country h3,
-.country li,
-.country a {
+.jitCountry h1,
+.jitCountry h3,
+.jitCountry li,
+.jitCountry a {
   color: black;
 }
 
@@ -49,8 +49,8 @@ a {
   text-decoration: none;
 }
 
-.country img,
-.darkCountry img {
+.jitCountry img,
+.jitDarkCountry img {
   width: 17rem;
   height: 10rem;
   border-radius: 0.3rem;
@@ -65,8 +65,8 @@ ul li {
   text-align: start;
 }
 
-.country h3,
-.darkCountry h3 {
+.jitCountry h3,
+.jitDarkCountry h3 {
   padding-left: 1.5rem;
   text-align: start;
 }
@@ -77,8 +77,8 @@ a div:hover {
 }
 
 @media screen and (max-width: 640px) {
-  .countries,
-  .darkCountries {
+  .jitCountry,
+  .jitDarkCountry {
   justify-content: center;
 }
 }

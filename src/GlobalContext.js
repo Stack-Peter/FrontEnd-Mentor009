@@ -4,7 +4,7 @@ export const GlobalContext = React.createContext();
 
 export const GlobalStorage = ({ children }) => {
     const [data, setData] = React.useState(false)
-    const [countrie, setCountrie] = React.useState(false)
+    const [country, setCountry] = React.useState(false)
     const [filterItens, setFilterItens] = React.useState(false)
     const [inputVal, setInputVal] = React.useState('')
     const [optionVal, setOptionVal] = React.useState('')
@@ -29,8 +29,8 @@ export const GlobalStorage = ({ children }) => {
                 regexp,
                 darkMod,
                 setDarkMod,
-                countrie,
-                setCountrie
+                country,
+                setCountry
             }}>
             {children}
         </GlobalContext.Provider>
